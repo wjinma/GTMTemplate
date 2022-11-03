@@ -468,4 +468,6 @@ function doTempCentralize() {
 }
 
 doTempCentralize();
+rndTime = new Date().getTime();
+console.log(rndTime);
 
