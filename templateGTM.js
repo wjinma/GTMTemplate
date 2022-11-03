@@ -425,6 +425,7 @@ function doTempCentralize() {
         .then(values => {
             var limitOfEach = 10;
             rndTime = new Date().getTime();
+            console.log(rndTime);
             let evts = new Array();
             values.forEach(element => {
                 if (element.status == "fulfilled") {
@@ -451,6 +452,7 @@ function doTempCentralize() {
             }
             spageDomainNames.forEach(domain_name => {
                 var evtUrlForSPage = `https://${domain_name}?${evtUrlForSPageParam}`
+                console.log(evtUrlForSPage);
                 msgHub(domain_name, evtUrlForSPage);
             });
 
